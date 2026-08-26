@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Continuity, NIS2 a řízení rizik | Premium Systems</title>
+<meta name="description" content="Váš byznys. Nezastavitelný. Business Continuity, NIS2 & ZoKB a experti na vaší straně. Absolutní jistota v každé situaci.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════ SCROLL-DRIVEN VIDEO BACKGROUND ══════════ -->
+<div class="video-stage" aria-hidden="true">
+  <video id="bgVideo" muted playsinline preload="auto" poster="assets/video/poster.jpg"></video>
+  <div class="video-overlay"></div>
+  <div class="video-grain"></div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><span id="scrollBar"></span></div>
+
+<!-- Indikátor sekcí -->
+<nav class="side-nav" id="sideNav" aria-label="Navigace sekcí">
+  <a href="#hero" data-section="hero"><span class="bar"></span><span class="label">Úvod</span></a>
+  <a href="#kontinuita" data-section="kontinuita"><span class="bar"></span><span class="label">Klidný spánek</span></a>
+  <a href="#reference" data-section="reference"><span class="bar"></span><span class="label">Reference</span></a>
+  <a href="#portfolio" data-section="portfolio"><span class="bar"></span><span class="label">Služby</span></a>
+  <a href="#pravidla" data-section="pravidla"><span class="bar"></span><span class="label">Pravidla hry</span></a>
+  <a href="#proc" data-section="proc"><span class="bar"></span><span class="label">Proč my</span></a>
+  <a href="#onas" data-section="onas"><span class="bar"></span><span class="label">O nás</span></a>
+  <a href="#kontakt" data-section="kontakt"><span class="bar"></span><span class="label">Kontakt</span></a>
+</nav>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Premium Systems">
+      <img src="assets/img/logo-white.svg" alt="Premium Systems">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#kontinuita">Business Continuity</a>
+      <a href="#portfolio">NIS2 &amp; ZoKB</a>
+      <a href="#proc">Experti na vaší straně</a>
+      <a href="#onas">O nás</a>
+      <a href="#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <p class="eyebrow reveal">Business Continuity</p>
+    <h1 class="hero-title reveal">
+      <span class="line">Váš byznys.</span>
+      <span class="line grad">Nezastavitelný.</span>
+    </h1>
+    <p class="hero-sub reveal">Když přijde nečekané, ostatní panikaří. Vy pokračujete.<br>Absolutní jistota. V&nbsp;každé situaci.</p>
+    <div class="hero-actions reveal">
+      <a href="#kontinuita" class="btn btn-primary">Zjistit více</a>
+      <a href="#kontakt" class="btn btn-ghost">Nezávazná analýza</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span class="hint-label">Skrolujte</span>
+    <span class="hint-line"></span>
+  </div>
+</section>
+
+<!-- ══════════ PŘÍBĚH DVOU KŘIVEK (scrollytelling) ══════════ -->
+<section class="chart-scroll" id="kontinuita">
+  <div class="chart-sticky">
+    <div class="container">
+      <div class="section-head chart-head reveal">
+        <p class="eyebrow">Klidný spánek. Pro vás i&nbsp;vaše klienty.</p>
+        <h2>Výpadky stojí <span class="grad">miliony</span>. Ztracená důvěra se nevrátí.</h2>
+        <p class="section-lead">Dvě firmy, stejný incident. Jen jedna pokračuje dál. Skrolujte.</p>
+      </div>
+
+      <div class="chart-stage">
+        <svg id="revChart" viewBox="0 0 1200 520" preserveAspectRatio="none" aria-label="Vývoj tržeb: s Premium Systems vs. bez ochrany">
+          <defs>
+            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#4dd6d9" stop-opacity="0.22"/>
+              <stop offset="1" stop-color="#4dd6d9" stop-opacity="0"/>
+            </linearGradient>
+            <clipPath id="chartClip">
+              <rect id="chartClipRect" x="0" y="-10" width="0" height="540"/>
+            </clipPath>
+          </defs>
+          <g id="chartGrid"></g>
+          <line id="incidentLine" x1="0" y1="10" x2="0" y2="500" stroke="#ff5d5d" stroke-width="1.5" stroke-dasharray="4 6" opacity="0"/>
+          <text id="incidentText" x="0" y="30" fill="#ff5d5d" opacity="0" font-size="15" font-weight="700" letter-spacing="3">INCIDENT</text>
+          <g clip-path="url(#chartClip)">
+            <path id="areaWith" fill="url(#areaGrad)"/>
+            <path id="lineWithout" fill="none" stroke="#ff5d5d" stroke-width="3" stroke-dasharray="7 7" stroke-linejoin="round"/>
+            <path id="lineWith" fill="none" stroke="#4dd6d9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+
+        <div class="chart-badge badge-with" id="badgeWith">
+          <span class="badge-value" id="valWith">0&nbsp;Kč</span>
+          <span class="badge-label">S&nbsp;Business Continuity</span>
+        </div>
+        <div class="chart-badge badge-without" id="badgeWithout">
+          <span class="badge-value" id="valWithout">0&nbsp;Kč</span>
+          <span class="badge-label">Bez Business Continuity</span>
+        </div>
+      </div>
+
+      <div class="chart-xlabels">
+        <span>Růst</span>
+        <span class="xl-incident">Incident</span>
+        <span class="xl-m">Obnova</span>
+        <span class="xl-m">Stabilizace</span>
+        <span>Výsledek</span>
+      </div>
+
+      <p class="chart-note" id="chartNote">S&nbsp;vyřešenou Business Continuity je incident <strong>rychle izolován</strong>. Neriskujete dny chaosu, penalizací a&nbsp;ztráty dat a&nbsp;zákazníků.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ REFERENCE ══════════ -->
+<section class="section" id="reference">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Ti, kteří už nečekají.</p>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-num">4,9/5 hodnocení</span>
+      </div>
+      <p class="section-lead">Lídři českého byznysu už svou kontinuitu řeší. Buďte součástí standardu, který definuje trh.</p>
+    </div>
+
+    <div class="logo-strip reveal" aria-label="Naši klienti">
+      <div class="logo-track">
+        <div class="logo-cell"><img src="assets/img/client-shopsys.webp" alt="Shopsys"></div>
+        <div class="logo-cell"><img src="assets/img/client-albert.png" alt="Albert"></div>
+        <div class="logo-cell"><img src="assets/img/client-celadna.webp" alt="Čeladná"></div>
+        <div class="logo-cell"><img src="assets/img/client-agel.svg" alt="Agel"></div>
+        <div class="logo-cell"><img src="assets/img/client-olp.webp" alt="Ostrava Logistics Park"></div>
+        <div class="logo-cell"><img src="assets/img/client-avogado.svg" alt="Avogado"></div>
+        <div class="logo-cell" aria-hidden="true"><img src="assets/img/client-shopsys.webp" alt=""></div>
+        <div class="logo-cell" aria-hidden="true"><img src="assets/img/client-albert.png" alt=""></div>
+        <div class="logo-cell" aria-hidden="true"><img src="assets/img/client-celadna.webp" alt=""></div>
+        <div class="logo-cell" aria-hidden="true"><img src="assets/img/client-agel.svg" alt=""></div>
+        <div class="logo-cell" aria-hidden="true"><img src="assets/img/client-olp.webp" alt=""></div>
+        <div class="logo-cell" aria-hidden="true"><img src="assets/img/client-avogado.svg" alt=""></div>
+      </div>
+    </div>
+
+    <figure class="testimonial reveal">
+      <blockquote class="pull-quote">
+        „S&nbsp;Premium Systems jsme získali víc než procesy. Získali jsme <em>klid pro naše akcionáře</em>.“
+      </blockquote>
+      <figcaption class="testimonial-author">
+        <span class="testimonial-name">Jakub Tomoszek</span>
+        <span class="testimonial-role">CEO &amp; Founder — Avogado Legal s.r.o.</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════ PORTFOLIO ══════════ -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Portfolio expertních služeb</p>
+      <h2>Ekosystém <span class="grad">odolnosti</span>.</h2>
+      <p class="section-lead">Business Continuity je srdcem našeho ekosystému. Kolem něj stavíme specifické vrstvy ochrany, které reagují na aktuální tržní hrozby a&nbsp;legislativní požadavky.</p>
+    </div>
+
+    <div class="cards">
+      <article class="glass card reveal">
+        <div class="card-num">01</div>
+        <h3>Business<br>Continuity</h3>
+        <p>Hloubková architektura přežití. Zajišťujeme, aby vaše firma fungovala i&nbsp;v&nbsp;případě totálního výpadku kritické infrastruktury.</p>
+        <a class="card-link" href="#kontakt">Prozkoumat metodu <span>→</span></a>
+      </article>
+      <article class="glass card reveal">
+        <div class="card-num">02</div>
+        <h3>NIS2<br>&amp;&nbsp;ZoKB</h3>
+        <p>Legislativa jako příležitost k&nbsp;opevnění. Převádíme povinné regulace do reálné konkurenční výhody. Bez stresu a&nbsp;pokut.</p>
+        <a class="card-link" href="#kontakt">Prověřit připravenost <span>→</span></a>
+      </article>
+      <article class="glass card reveal">
+        <div class="card-num">03</div>
+        <h3>Experti<br>na&nbsp;vyžádání</h3>
+        <p>Kybernetická bezpečnost, krizový management a&nbsp;ostré testy připravenosti. Služby na míru tam, kde standard nestačí.</p>
+        <a class="card-link" href="#kontakt">Další expertíza <span>→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ZMĚŇTE PRAVIDLA HRY ══════════ -->
+<section class="section" id="pravidla">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Změňte <span class="grad">pravidla hry</span>.</h2>
+    </div>
+    <div class="duo">
+      <div class="glass duo-item reveal">
+        <h3>Předvídání. Ne&nbsp;reakce.</h3>
+        <p>Výpadky stojí miliony. Ztracená důvěra se nevrátí. Buďte připraveni dřív, než problém nastane.</p>
+      </div>
+      <div class="glass duo-item reveal">
+        <h3>Důvěra. Zpečetěna.</h3>
+        <p>Klienti vědí, že na vás je spolehnutí. Vždy. Stáváte se bezpečným přístavem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROČ PREMIUM SYSTEMS (scrollytelling) ══════════ -->
+<section class="proc-scroll" id="proc">
+  <div class="proc-sticky">
+    <div class="container">
+      <div class="section-head proc-head reveal">
+        <p class="eyebrow">Proč Premium Systems</p>
+        <h2>Definujeme <span class="grad">standard</span>.</h2>
+        <p class="section-lead">Nejsme konzultanti. Jsme architekti vaší kontinuity. Odmítáme korporátní vatu. Dodáváme funkční procesy a&nbsp;řešení.</p>
+      </div>
+
+      <div class="principles-row">
+        <div class="principle">
+          <div class="p-num">// 01</div>
+          <p>Neděláme všechno. Děláme Business Continuity. Naše pozornost není roztříštěná mezi desítky IT služeb. Děláme jednu věc a&nbsp;děláme ji nejlépe na trhu.</p>
+          <div class="p-strip"><span class="p-fill"></span></div>
+          <h3>Absolutní fokus.</h3>
+        </div>
+        <div class="principle">
+          <div class="p-num">// 02</div>
+          <p>Naše řešení nejsou teoretické manuály, které skončí v&nbsp;šuplíku. Jsou to živé procesy zakomponované do DNA vaší firmy. Navrhujeme odolnost, která dýchá s&nbsp;vámi.</p>
+          <div class="p-strip"><span class="p-fill"></span></div>
+          <h3>Žádné šablony.</h3>
+        </div>
+        <div class="principle">
+          <div class="p-num">// 03</div>
+          <p>Kombinujeme hlubokou manažerskou expertízu s&nbsp;nejmodernějšími technologiemi. Výsledkem je neprůstřelný systém, který vás udrží v&nbsp;provozu i&nbsp;v&nbsp;bouři.</p>
+          <div class="p-strip"><span class="p-fill"></span></div>
+          <h3>Křemíková jistota.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CEO ══════════ -->
+<section class="section" id="onas">
+  <div class="container">
+    <div class="glass ceo reveal">
+      <div class="ceo-text">
+        <h2 class="ceo-title">Kontinuita není projekt.<br><span class="grad">Je to instinkt.</span></h2>
+        <blockquote>
+          <p>„V&nbsp;dnešním světě není otázkou, zda krize přijde, ale kdy. Úspěch v&nbsp;takovém prostředí nezávisí na štěstí, ale na schopnosti se nikdy nezastavit.“</p>
+          <p>„Premium Systems jsem založil pro lídry, kteří odmítají kompromisy. Pomáháme vám vybudovat firmu, která je silnější než jakákoliv překážka. Vaše životní dílo si zaslouží neprůstřelnou ochranu.“</p>
+        </blockquote>
+        <div class="ceo-sig">
+          <span class="ceo-name">Jiří Pudich</span>
+          <span class="ceo-role">CEO &amp; Founder</span>
+        </div>
+      </div>
+      <div class="ceo-photo">
+        <img src="assets/img/jiri-pudich-upraveny.webp" alt="Jiří Pudich, CEO &amp; Founder Premium Systems">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="section cta-section" id="kontakt">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="cta-title">Víme, <span class="grad">kde začít</span>.</h2>
+      <p class="section-lead">První krok je analýza. Je diskrétní, rychlá a&nbsp;ukáže vám odolnost firmy.</p>
+      <a href="mailto:info@premiumsystems.cz" class="btn btn-primary btn-lg">Pustit se do toho.</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/img/logo-white.svg" alt="Premium Systems" class="footer-logo">
+      <p>Architekti vaší kontinuity.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <a href="tel:+420737353737">+420&nbsp;737&nbsp;353&nbsp;737</a>
+      <a href="mailto:info@premiumsystems.cz">info@premiumsystems.cz</a>
+    </div>
+    <div class="footer-col">
+      <h4>Sídlo</h4>
+      <p>Hasičská 930/53<br>Ostrava</p>
+    </div>
+    <div class="footer-col">
+      <h4>Fakturační údaje</h4>
+      <p>IČO: 293&nbsp;92&nbsp;721<br>Krajský soud v&nbsp;Ostravě<br>spisová značka C&nbsp;38484</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> Premium Systems s.r.o. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
