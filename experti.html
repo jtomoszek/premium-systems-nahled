@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experti na vaší straně | Premium Systems</title>
+<meta name="description" content="Taktická elita. Bez hranic. Tam, kde standardní firmy končí, my začínáme. Služby na míru tam, kde standard nestačí.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/img/favicon-256.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+<!-- ══════════ SCROLL-DRIVEN VIDEO BACKGROUND ══════════ -->
+<div class="video-stage" aria-hidden="true">
+  <video id="bgVideo" muted playsinline preload="auto" poster="assets/video/poster4.jpg"
+         data-src-desktop="assets/video/zoom-scrub.mp4"
+         data-src-mobile="assets/video/zoom-scrub-mobile.mp4"></video>
+  <div class="video-overlay"></div>
+  <div class="video-grain"></div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><span id="scrollBar"></span></div>
+
+<!-- Indikátor sekcí -->
+<nav class="side-nav" id="sideNav" aria-label="Navigace sekcí">
+  <a href="#hero" data-section="hero"><span class="bar"></span><span class="label">Úvod</span></a>
+  <a href="#sluzby" data-section="sluzby"><span class="bar"></span><span class="label">Služby</span></a>
+  <a href="#compliance" data-section="compliance"><span class="bar"></span><span class="label">Compliance</span></a>
+  <a href="#dotazy" data-section="dotazy"><span class="bar"></span><span class="label">Dotazy</span></a>
+  <a href="#kontakt" data-section="kontakt"><span class="bar"></span><span class="label">Kontakt</span></a>
+</nav>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Premium Systems">
+      <img src="assets/img/logo-white.svg" alt="Premium Systems">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="business-continuity.html">Business Continuity</a>
+      <a href="nis2-zokb.html">NIS2 &amp; ZoKB</a>
+      <a href="experti.html">Experti na vaší straně</a>
+      <a href="index.html#onas">O nás</a>
+      <a href="index.html#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <p class="eyebrow reveal">Experti na vaší straně</p>
+    <h1 class="hero-title reveal">
+      <span class="line">Taktická elita.</span>
+      <span class="line grad">Bez hranic.</span>
+    </h1>
+    <p class="hero-sub reveal">Tam, kde standardní firmy končí, my začínáme.<br>Služby na míru tam, kde standard nestačí.</p>
+    <div class="hero-actions reveal">
+      <a href="#sluzby" class="btn btn-primary">Zjistit více</a>
+      <a href="#kontakt" class="btn btn-ghost">Aktivovat tým</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span class="hint-label">Skrolujte</span>
+    <span class="hint-line"></span>
+  </div>
+</section>
+
+<!-- ══════════ SLUŽBY ══════════ -->
+<section class="section" id="sluzby">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Expertní zásahy</p>
+      <h2>Služby <span class="grad">na míru</span>.</h2>
+    </div>
+    <div class="exp-grid">
+      <div class="glass exp-item reveal">
+        <div class="p-num">Shadow Admin</div>
+        <h3>Dohled, který neponechává nic náhodě.</h3>
+        <p>Provádíme kompletní supervizi IT infrastruktury a&nbsp;auditujeme IT směrnice. Připravujeme vás na budoucnost: ISO/IEC 42001:2023 a&nbsp;AI Act.</p>
+        <div class="tags">
+          <span class="tag">Supervize stávajících systémů</span>
+          <span class="tag">AI Governance</span>
+        </div>
+      </div>
+      <div class="glass exp-item reveal">
+        <div class="p-num">Intervence</div>
+        <h3>Okamžitá pomoc.</h3>
+        <p>Ransomware, phishing nebo DDoS útoky? Reagujeme dřív, než se incident změní v&nbsp;katastrofu.</p>
+        <div class="tags">
+          <span class="tag">Incident Handling</span>
+          <span class="tag">Personální krizový management</span>
+        </div>
+      </div>
+      <div class="glass exp-item reveal">
+        <div class="p-num">Forenzní audit</div>
+        <h3>Pravda je pod povrchem.</h3>
+        <p>Řešíme vnitřní hrozby: krádeže, podvody, zpronevěry. Realizujeme hloubkové screeningy kandidátů na klíčové pozice.</p>
+        <div class="tags">
+          <span class="tag">Audity technických služeb</span>
+          <span class="tag">Odhalování krádeží a nekalostí</span>
+          <span class="tag">Optimalizace pravidel a procesů</span>
+        </div>
+      </div>
+      <div class="glass exp-item reveal">
+        <div class="p-num">Integrace areálů</div>
+        <h3>Fyzický prostor pod kontrolou.</h3>
+        <p>Automatizace vjezdů a&nbsp;výjezdů na základě analýzy obrazu. Propojujeme kamerové systémy (EZS) s&nbsp;docházkou, závorami a&nbsp;čtečkami do jednoho inteligentního workflow.</p>
+        <div class="tags">
+          <span class="tag">LPR Integration</span>
+          <span class="tag">Smart Traffic Control</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ COMPLIANCE LEADERSHIP ══════════ -->
+<section class="section" id="compliance">
+  <div class="container">
+    <div class="glass exp-full reveal">
+      <div class="exp-full-text">
+        <div class="p-num">Compliance Leadership</div>
+        <h3>Váš externí manažer compliance.</h3>
+        <p>Přebíráme řízení compliance, politik a&nbsp;procesů napříč firmou. Soulad s&nbsp;regulacemi (NIS2 a&nbsp;další), směrnice, plány kontinuity, disaster recovery, vzdělávání zaměstnanců. Pod jednou odpovědností, bez nutnosti najímat interní pozici.</p>
+      </div>
+      <div class="exp-stats">
+        <div class="exp-stat">
+          <span class="exp-stat-value grad">100&nbsp;%</span>
+          <span class="exp-stat-label">Legislativní shoda</span>
+        </div>
+        <div class="exp-stat">
+          <span class="exp-stat-value grad">Jedno</span>
+          <span class="exp-stat-label">Místo odpovědnosti</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="section" id="dotazy">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Časté dotazy managementu</p>
+      <h2>Jasné <span class="grad">odpovědi</span>.</h2>
+      <p class="section-lead">Rozptylujeme pochybnosti tam, kde jiní jen teoretizují.</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>V jakých situacích nás firmy nejčastěji oslovují?</summary>
+        <p>Vedení si uvědomí, že chod firmy závisí na jediném IT správci a&nbsp;nemá kdo ho zastoupit. Blíží se audit, regulátor nebo NIS2. Stalo se něco: ransomware, podezření na zpronevěru, únik dat, odchod klíčové osoby. Firma roste, plánuje akvizici nebo nový areál. Pokud poznáváte aspoň jednu z&nbsp;těchto situací, dává smysl se ozvat.</p>
+      </details>
+      <details>
+        <summary>Jaký je první konkrétní krok spolupráce?</summary>
+        <p>Úvodní rozhovor s&nbsp;vedením. Bez technického dotazníku, bez powerpointu. Cílem je společně pojmenovat, kde firma stojí a&nbsp;co ji nejvíc tlačí. Pokud má spolupráce smysl, navrhneme konkrétní program. Pokud nemá, řekneme to. Vedení odchází z&nbsp;rozhovoru s&nbsp;přehledem situace, ne s&nbsp;nabídkou služeb.</p>
+      </details>
+      <details>
+        <summary>V čem firmy nejčastěji narazí na limity běžných dodavatelů?</summary>
+        <p>Dodavatelé řeší svou část. Nikdo neřeší celek. Technologie, procesy a&nbsp;rozhodování zůstávají oddělené. Problém vzniká mezi nimi. Právě tam vznikají situace, které už standardní dodavatel neumí pokrýt. Tam pracujeme my.</p>
+      </details>
+      <details>
+        <summary>Co se stane, když je firma závislá na jednom IT správci?</summary>
+        <p>Ztrácí kontrolu nad vlastním provozem. Nejde o&nbsp;to, že odejde. Stačí, že není dostupný ve chvíli, kdy je potřeba rozhodnout. Shadow Admin nevytváří paralelní IT. Odstraňuje tuto závislost. Tým vzájemně zastupitelných správců na naší straně průběžně sdílí znalosti o&nbsp;vaší infrastruktuře a&nbsp;je připraven operativně převzít správu. Součástí je i&nbsp;příprava na ISO/IEC 42001 a&nbsp;AI Act.</p>
+      </details>
+      <details>
+        <summary>Proč o výsledku incidentu rozhodují první hodiny?</summary>
+        <p>V&nbsp;prvních hodinách firma neztrácí data. Ztrácí přehled. Rozhodnutí se odkládají, protože chybí informace, ne protože chybí čas. Intervence je okamžitá pomoc na straně vedení, ne jen technická reakce. Řešíme dvě roviny krize: technickou (ransomware, phishing, DDoS, ztráta dat) a&nbsp;personální (odchod klíčové osoby v&nbsp;IT, podezření z&nbsp;neoprávněného přístupu). Cílem je, aby firma obstála nejen v&nbsp;incidentu, ale i&nbsp;v&nbsp;jeho dohře vůči zákazníkům, regulátorovi a&nbsp;pojišťovně.</p>
+      </details>
+      <details>
+        <summary>Proč bývá vnitřní hrozba nákladnější než vnější útok?</summary>
+        <p>Vnější útok firma většinou pozná. Vnitřní zpronevěra se hromadí měsíce, někdy roky. Ve chvíli, kdy se na ni přijde, je škoda hotová a&nbsp;často nedohledatelná. Forenzní audit šetří krádeže, podvody a&nbsp;zpronevěry uvnitř firmy. Provádíme hloubkové screeningy kandidátů na klíčové pozice ještě dřív, než dostanou přístupy. A&nbsp;audity technických služeb, tedy ověření, jestli dodavatel skutečně dodává to, za co fakturuje.</p>
+      </details>
+      <details>
+        <summary>Kde nejčastěji selhává řízení firem s vlastním areálem?</summary>
+        <p>V&nbsp;dělbě mezi dodavatele. Kamery od jednoho, závory od druhého, docházka od třetího. Žádný společný pohled. Žádná jednotná data. Při incidentu se ztrácí čas hledáním, kdo má co. Integrace areálů znamená propojení stávajících systémů (kamery, EZS, závory, čtečky, terminály, docházka) do jednoho funkčního celku. K&nbsp;tomu automatizace vjezdů a&nbsp;parkování na základě analýzy obrazu.</p>
+      </details>
+      <details>
+        <summary>Kdo ve vaší firmě reálně drží compliance jako celek?</summary>
+        <p>V&nbsp;mnoha firmách nikdo. Agenda visí rozdělená mezi IT, právní oddělení, HR a&nbsp;vedení. Každý řeší svou část, nikdo nedrží celkový obraz. Compliance Leadership je externí manažer compliance jako role, ne jako jednorázová konzultace. Přebíráme řízení compliance, politik a&nbsp;procesů napříč firmou. Soulad s&nbsp;regulacemi (NIS2 a&nbsp;další), směrnice, plány kontinuity, disaster recovery, vzdělávání. Pod jednou odpovědností, bez nutnosti najímat interní pozici.</p>
+      </details>
+      <details>
+        <summary>V jakém formátu se služby účtují a kupují?</summary>
+        <p>Tři režimy podle povahy práce. Měsíční paušál pro průběžné služby (Shadow Admin, Compliance Leadership). Jednorázový projekt s&nbsp;pevným rozpočtem (Forenzní audit, Integrace areálů). Krizová podpora ad hoc při Intervenci. Spolupráce v&nbsp;paušálním režimu je ze strany klienta vypověditelná kdykoliv, bez sankcí. Konkrétní rozpočet vychází z&nbsp;úvodního posouzení.</p>
+      </details>
+      <details>
+        <summary>Jaké výstupy firma během spolupráce dostane?</summary>
+        <p>Vše ve formě, kterou lze předložit auditorovi i&nbsp;statutárnímu orgánu, ne jen IT oddělení. U&nbsp;Shadow Admin: technická dokumentace infrastruktury, IT směrnice, předávací protokoly. U&nbsp;Compliance Leadership: politiky, registr rizik, plány kontinuity, kontrolní stopa pro audit. U&nbsp;Forenzního auditu: zpráva o&nbsp;zjištěních a&nbsp;doporučeních. U&nbsp;Integrace areálů: dokumentace propojení a&nbsp;workflow. Při ukončení spolupráce zůstávají všechny výstupy ve firmě.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="section cta-section" id="kontakt">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="cta-title">Rozhodněte o&nbsp;své <span class="grad">budoucnosti</span> teď.</h2>
+      <p class="section-lead">První krok je nezávazné setkání. Je diskrétní a&nbsp;rychle vám ukáže, jestli si budeme rozumět.</p>
+      <a href="mailto:info@premiumsystems.cz" class="btn btn-primary btn-lg">Aktivovat tým</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/img/logo-white.svg" alt="Premium Systems" class="footer-logo">
+      <p>Architekti vaší kontinuity.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <a href="tel:+420737353737">+420&nbsp;737&nbsp;353&nbsp;737</a>
+      <a href="mailto:info@premiumsystems.cz">info@premiumsystems.cz</a>
+    </div>
+    <div class="footer-col">
+      <h4>Sídlo</h4>
+      <p>Hasičská 930/53<br>Ostrava</p>
+    </div>
+    <div class="footer-col">
+      <h4>Fakturační údaje</h4>
+      <p>IČO: 293&nbsp;92&nbsp;721<br>Krajský soud v&nbsp;Ostravě<br>spisová značka C&nbsp;38484</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> Premium Systems s.r.o. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+
+<script src="js/subpage.js?v=3"></script>
+</body>
+</html>

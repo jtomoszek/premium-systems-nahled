@@ -989,3 +989,54 @@ h3 { font-size: clamp(1.35rem, 1.9vw, 2rem); }
 @media (max-width: 960px) {
   .bc-timeline { grid-template-columns: 1fr; }
 }
+
+/* Experti: služby + compliance */
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.exp-item { padding: 42px 38px; display: flex; flex-direction: column; }
+.exp-item h3 { margin: 14px 0 14px; font-size: clamp(1.35rem, 1.8vw, 1.8rem); }
+.exp-item p { color: var(--ink-dim); flex: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.tag {
+  border: 1px solid rgba(120, 180, 220, 0.28);
+  border-radius: 100px;
+  padding: 7px 16px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+.exp-full {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  padding: clamp(38px, 5vw, 64px);
+  align-items: center;
+}
+.exp-full-text h3 { margin: 14px 0 16px; font-size: clamp(1.5rem, 2.2vw, 2.2rem); }
+.exp-full-text p { color: var(--ink-dim); }
+.exp-stats { display: flex; flex-direction: column; gap: 28px; }
+.exp-stat { display: flex; flex-direction: column; gap: 4px; }
+.exp-stat-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 3.4vw, 3.4rem);
+  line-height: 1;
+}
+.exp-stat-label {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink-dim);
+}
+@media (max-width: 960px) {
+  .exp-grid { grid-template-columns: 1fr; }
+  .exp-full { grid-template-columns: 1fr; }
+  .exp-stats { flex-direction: row; gap: 40px; }
+}
