@@ -704,15 +704,21 @@ h3 { font-size: clamp(1.35rem, 1.9vw, 2rem); }
 .ceo-photo {
   position: relative;
   min-height: 460px;
+  overflow: hidden;
 }
 .ceo-photo img {
+  /* postava se vždy škáluje na výšku panelu — žádný mrtvý prostor nahoře;
+     centrování v ose sloupce, ukotvení dole */
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  /* postava vycentrovaná mezi okrajem panelu a textem, ukotvená dole */
-  object-fit: contain;
-  object-position: center bottom;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 94%;
+  width: auto;
+  aspect-ratio: 1150 / 1414;
+  max-width: none;
   /* postava při skrolování vyrůstá zespodu — posun řídí JS */
   will-change: transform;
 }
