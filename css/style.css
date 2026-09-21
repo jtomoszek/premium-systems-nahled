@@ -976,3 +976,16 @@ h3 { font-size: clamp(1.35rem, 1.9vw, 2rem); }
 @media (max-width: 560px) {
   .principles-row.cols4 { grid-template-columns: 1fr; }
 }
+
+/* NIS2: časová osa + povinnosti */
+.bc-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.bc-timeline .duo-item .p-num { margin-bottom: 14px; }
+.bc-timeline .duo-item p strong { color: var(--accent); }
+.cards.oblig .card h3 { font-size: clamp(1.3rem, 1.7vw, 1.7rem); }
+@media (max-width: 960px) {
+  .bc-timeline { grid-template-columns: 1fr; }
+}
