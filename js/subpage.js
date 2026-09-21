@@ -37,9 +37,81 @@
     seekBusy = false;
   });
 
+  /* ── Přišpendlená scrollytelling sekce ──────── */
+  const procSection = document.querySelector(".proc-scroll");
+  let procStart = 0;
+  let procSpan = 1;
+
+  function measure() {
+    if (!procSection) return;
+    const r = procSection.getBoundingClientRect();
+    procStart = r.top + window.scrollY;
+    procSpan = Math.max(1, procSection.offsetHeight - window.innerHeight);
+  }
+  window.addEventListener("resize", measure);
+  window.addEventListener("load", measure);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  measure();
+
+  function procProgress() {
+    return Math.min(1, Math.max(0, (window.scrollY - procStart) / procSpan));
+  }
+
+  // Průběh videa z "virtuálního" scrollu bez přišpendleného úseku —
+  // Země se během něj zastaví a za ním plynule naváže.
   function scrollProgress() {
     const max = document.documentElement.scrollHeight - window.innerHeight;
-    return max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    const y = window.scrollY;
+    const pinned = procSection ? Math.min(procSpan, Math.max(0, y - procStart)) : 0;
+    const virtualMax = Math.max(1, max - (procSection ? procSpan : 0));
+    return Math.min(1, Math.max(0, (y - pinned) / virtualMax));
+  }
+
+  // Plynulé rozmazání pozadí kolem přišpendlené zóny — v obou směrech.
+  let lastBlur = -1;
+  function updateBlur() {
+    if (!procSection) return;
+    const y = window.scrollY;
+    const vh = window.innerHeight;
+    const leadIn = vh * 0.9;
+    const leadOut = vh * 0.9;
+    const rampIn = Math.min(1, Math.max(0, (y - (procStart - leadIn)) / leadIn));
+    const rampOut = 1 - Math.min(1, Math.max(0, (y - (procStart + procSpan)) / leadOut));
+    const f = Math.min(rampIn, rampOut);
+    if (Math.abs(f - lastBlur) < 0.01) return;
+    lastBlur = f;
+    if (f <= 0.005) {
+      video.style.filter = "";
+    } else {
+      video.style.filter =
+        "blur(" + (f * 22).toFixed(1) + "px) brightness(" + (1 - f * 0.45).toFixed(3) +
+        ") saturate(" + (1 - f * 0.2).toFixed(3) + ")";
+    }
+  }
+
+  // Sloupce naskakují postupně a jejich linky se plní jedna po druhé —
+  // vše řízené čistě pozicí scrollu, dopředu i pozpátku.
+  const principles = Array.from(document.querySelectorAll(".principle"));
+  const fills = principles.map((card) => card.querySelector(".p-fill"));
+  const nP = principles.length;
+  let lastProcProg = -1;
+
+  function updateProc() {
+    if (!nP) return;
+    const p = procProgress();
+    if (p === lastProcProg) return;
+    lastProcProg = p;
+    const span = nP > 1 ? 0.64 / (nP - 1) : 0;
+    principles.forEach((card, i) => {
+      const rs = 0.04 + i * span;
+      const t = Math.min(1, Math.max(0, (p - rs) / 0.16));
+      const e = t * t * (3 - 2 * t);
+      card.style.opacity = e.toFixed(3);
+      card.style.transform = "translateY(" + (44 * (1 - e)).toFixed(1) + "px)";
+      const f = Math.min(1, Math.max(0, (p - (rs + 0.06)) / 0.18));
+      fills[i].style.transform = "scaleX(" + (f * f * (3 - 2 * f)).toFixed(4) + ")";
+      card.classList.toggle("active", f >= 0.98);
+    });
   }
 
   function tick() {
@@ -56,6 +128,8 @@
         }
       }
     }
+    updateBlur();
+    updateProc();
     requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);

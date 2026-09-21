@@ -910,32 +910,6 @@ h3 { font-size: clamp(1.35rem, 1.9vw, 2rem); }
   gap: 28px;
 }
 
-/* Operační proces: 4 kroky ve stylu sloupců s linkou */
-.steps-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(28px, 3.5vw, 56px);
-}
-.step { display: flex; flex-direction: column; align-items: flex-start; }
-.step p {
-  color: var(--ink-dim);
-  margin-top: clamp(14px, 2vh, 24px);
-  font-size: clamp(0.92rem, 1.05vw, 1.05rem);
-  line-height: 1.7;
-  min-height: 6.5em;
-}
-.step .p-fill {
-  transform: scaleX(0);
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.step.reveal.in .p-fill { transform: scaleX(1); }
-.steps-row .step:nth-child(2) .p-fill { transition-delay: 0.25s; }
-.steps-row .step:nth-child(3) .p-fill { transition-delay: 0.5s; }
-.steps-row .step:nth-child(4) .p-fill { transition-delay: 0.75s; }
-.steps-row .step:nth-child(2) { transition-delay: 0.1s; }
-.steps-row .step:nth-child(3) { transition-delay: 0.2s; }
-.steps-row .step:nth-child(4) { transition-delay: 0.3s; }
-
 /* FAQ */
 .faq {
   max-width: 860px;
@@ -987,9 +961,18 @@ h3 { font-size: clamp(1.35rem, 1.9vw, 2rem); }
 @media (max-width: 960px) {
   .bc-grid { grid-template-columns: 1fr; }
   .bc-benefits { grid-template-columns: 1fr; }
-  .steps-row { grid-template-columns: 1fr 1fr; }
-  .step p { min-height: 0; }
+}
+
+/* Operační proces: varianta se 4 sloupci (stejný scrollytelling jako homepage) */
+.principles-row.cols4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(26px, 3vw, 52px);
+}
+.principles-row.cols4 .principle p { min-height: 6.5em; }
+@media (max-width: 960px) {
+  .principles-row.cols4 { grid-template-columns: 1fr 1fr; }
+  .principles-row.cols4 .principle p { min-height: 0; }
 }
 @media (max-width: 560px) {
-  .steps-row { grid-template-columns: 1fr; gap: 24px; }
+  .principles-row.cols4 { grid-template-columns: 1fr; }
 }
