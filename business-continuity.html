@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Continuity | Řízení kontinuity provozu firmy | Premium Systems</title>
+<meta name="description" content="Vaše firma. Nesmrtelná. Business Continuity není plán B. Je to záruka, že váš plán A nikdy neselže.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════ SCROLL-DRIVEN VIDEO BACKGROUND ══════════ -->
+<div class="video-stage" aria-hidden="true">
+  <video id="bgVideo" muted playsinline preload="auto" poster="assets/video/poster2.jpg"
+         data-src-desktop="assets/video/earth2-scrub.mp4"
+         data-src-mobile="assets/video/earth2-scrub-mobile.mp4"></video>
+  <div class="video-overlay"></div>
+  <div class="video-grain"></div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><span id="scrollBar"></span></div>
+
+<!-- Indikátor sekcí -->
+<nav class="side-nav" id="sideNav" aria-label="Navigace sekcí">
+  <a href="#hero" data-section="hero"><span class="bar"></span><span class="label">Úvod</span></a>
+  <a href="#zaloha" data-section="zaloha"><span class="bar"></span><span class="label">Záloha nestačí</span></a>
+  <a href="#vyhody" data-section="vyhody"><span class="bar"></span><span class="label">Výhody</span></a>
+  <a href="#proces" data-section="proces"><span class="bar"></span><span class="label">Proces</span></a>
+  <a href="#dotazy" data-section="dotazy"><span class="bar"></span><span class="label">Dotazy</span></a>
+  <a href="#kontakt" data-section="kontakt"><span class="bar"></span><span class="label">Kontakt</span></a>
+</nav>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Premium Systems">
+      <img src="assets/img/logo-white.svg" alt="Premium Systems">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="business-continuity.html">Business Continuity</a>
+      <a href="index.html#portfolio">NIS2 &amp; ZoKB</a>
+      <a href="index.html#proc">Experti na vaší straně</a>
+      <a href="index.html#onas">O nás</a>
+      <a href="index.html#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <p class="eyebrow reveal">Detailní architektura odolnosti</p>
+    <h1 class="hero-title reveal">
+      <span class="line">Vaše firma.</span>
+      <span class="line grad">Nesmrtelná.</span>
+    </h1>
+    <p class="hero-sub reveal">Business Continuity není plán B.<br>Je to záruka, že váš plán A nikdy neselže.</p>
+    <div class="hero-actions reveal">
+      <a href="#zaloha" class="btn btn-primary">Zjistit více</a>
+      <a href="#kontakt" class="btn btn-ghost">Chci to probrat</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span class="hint-label">Skrolujte</span>
+    <span class="hint-line"></span>
+  </div>
+</section>
+
+<!-- ══════════ ZÁLOHA NESTAČÍ ══════════ -->
+<section class="section" id="zaloha">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Rozdíl je fatální</p>
+      <h2>Záloha <span class="grad">nestačí</span>.</h2>
+      <p class="section-lead">Většina firem si plete IT zálohování s&nbsp;Business Continuity. Záloha vám vrátí data. Kontinuita vám vrátí firmu, lidi a&nbsp;důvěru zákazníků.</p>
+    </div>
+
+    <div class="bc-grid">
+      <div class="glass bc-stat reveal">
+        <p class="bc-stat-label">Rychlost návratu (RTO)</p>
+        <p class="bc-stat-value"><span class="grad">Sekundy a&nbsp;minuty.</span></p>
+        <p class="bc-stat-note">Místo dnů a&nbsp;týdnů se bavíme o&nbsp;sekundách a&nbsp;minutách.</p>
+      </div>
+      <div class="glass bc-checklist reveal">
+        <p class="bc-stat-label">Premium Standard</p>
+        <ul>
+          <li>BIA (Business Impact Analysis)</li>
+          <li>Strategie krizového řízení</li>
+          <li>Ostré simulace útoků</li>
+          <li>Kontinuita dodavatelského řetězce</li>
+          <li>Architektura High Availability</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STRATEGICKÉ VÝHODY ══════════ -->
+<section class="section" id="vyhody">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Architektura dominance</p>
+      <h2>Strategické <span class="grad">výhody</span>.</h2>
+    </div>
+    <div class="bc-benefits">
+      <div class="glass duo-item reveal">
+        <h3>Důvěra akcionářů.</h3>
+        <p>Váš byznys není postaven na náhodě. Business Continuity vysílá jasný signál trhu i&nbsp;bankám: Máme situaci pod kontrolou. Vždy.</p>
+      </div>
+      <div class="glass duo-item reveal">
+        <h3>Konkurenční náskok.</h3>
+        <p>Když konkurence při krizi improvizuje a&nbsp;ztrácí klienty, vy plynule pokračujete. Krize se pro vás stává příležitostí k&nbsp;růstu.</p>
+      </div>
+      <div class="glass duo-item reveal">
+        <h3>Nulová právní rizika.</h3>
+        <p>Zabezpečujeme soulad s&nbsp;NIS2 a&nbsp;dalšími regulacemi. Chráníme management před osobní odpovědností za zanedbanou péči.</p>
+      </div>
+      <div class="glass duo-item reveal">
+        <h3>Klid ve vedení.</h3>
+        <p>Odstraňujeme stres z&nbsp;neznáma. Manažeři se mohou soustředit na strategii, protože o&nbsp;přežití je již rozhodnuto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ OPERAČNÍ PROCES ══════════ -->
+<section class="section" id="proces">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Operační proces</p>
+      <h2>Jak budujeme <span class="grad">odolnost</span>.</h2>
+      <p class="section-lead">Nejsme konzultanti. Jsme architekti vaší kontinuity. Odmítáme korporátní vatu. Dodáváme funkční procesy a&nbsp;řešení.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step reveal">
+        <div class="p-num">// 01</div>
+        <p>Identifikujeme to, co skutečně generuje peníze, a&nbsp;co je pro firmu kritické.</p>
+        <div class="p-strip"><span class="p-fill"></span></div>
+        <h3>Rentgen.</h3>
+      </div>
+      <div class="step reveal">
+        <div class="p-num">// 02</div>
+        <p>Vytvoříme procesy, které nevyžadují kreativitu v&nbsp;krizi. Jen exekuci.</p>
+        <div class="p-strip"><span class="p-fill"></span></div>
+        <h3>Plán.</h3>
+      </div>
+      <div class="step reveal">
+        <div class="p-num">// 03</div>
+        <p>Implementujeme špičkové technologie, které firmu udrží nad hladinou.</p>
+        <div class="p-strip"><span class="p-fill"></span></div>
+        <h3>Zbrojnice.</h3>
+      </div>
+      <div class="step reveal">
+        <div class="p-num">// 04</div>
+        <p>Simulujeme realitu. Získáváme reflexy, které jsou silnější než strach.</p>
+        <div class="p-strip"><span class="p-fill"></span></div>
+        <h3>Bitva.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="section" id="dotazy">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Časté dotazy managementu</p>
+      <h2>Jasné <span class="grad">odpovědi</span>.</h2>
+      <p class="section-lead">Rozptylujeme pochybnosti tam, kde jiní jen teoretizují.</p>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Proč většina firem řeší Business Continuitu špatně?</summary>
+        <p>Business Continuity se často deleguje na IT. Výsledkem je plán obnovy technologií, ne plán fungování firmy. Ve chvíli výpadku pak firma ví, jak obnovit systémy. Neví, jak fungovat bez nich.</p>
+      </details>
+      <details>
+        <summary>Jak poznáme, že naše plány na pokračování provozu nestačí?</summary>
+        <p>Plán existuje. Kontrola jeho aktuálnosti ale neprobíhá. Nikdo neví, jestli odpovídá realitě dnešního provozu. Slabost není v&nbsp;dokumentu, ale v&nbsp;tom, že ho nikdo neověřuje. Ukáže se to až při incidentu, kdy už je pozdě reagovat.</p>
+      </details>
+      <details>
+        <summary>Proč firmám nestačí samotné Disaster Recovery plány?</summary>
+        <p>Disaster recovery plány řeší obnovu IT systémů. Business Continuita řeší pokračování firmy: lidé, procesy, dodavatelé, rozhodování. Firma s&nbsp;funkčním Disaster Recovery plánem ví, jak obnovit servery. Neví, jak fungovat bez nich. To je rozdíl mezi technickým úkolem a&nbsp;řízením firmy.</p>
+      </details>
+      <details>
+        <summary>Proč pojištění neřeší výpadek fungování firmy?</summary>
+        <p>Pojištění řeší peníze. Neřeší provoz. Firma může mít nárok na plnění a&nbsp;zároveň ztratit zákazníky během prvních dnů výpadku. Mezi výpadkem a&nbsp;vyplacením pojistky bývají týdny. V&nbsp;té době zákazníci, dodavatelé a&nbsp;zaměstnanci nečekají.</p>
+      </details>
+      <details>
+        <summary>Jak rychle se musí firma dokázat zotavit?</summary>
+        <p>Otázka pro vedení nezní „Máme zálohy?“, ale „Kolik hodin výpadku přežijeme bez ztráty zákazníka, smlouvy nebo reputace?“. Z&nbsp;této odpovědi se odvozuje technické řešení, ne naopak. Bez tohoto rámce firma investuje do nesprávných míst.</p>
+      </details>
+      <details>
+        <summary>Co se stane, když plán kontinuity nikdo netestuje?</summary>
+        <p>Plán přestane odpovídat realitě. Lidé se změní, systémy se vymění, dodavatelé odejdou. Při incidentu se pak neověřuje plán. Prověřuje se schopnost firmy improvizovat.</p>
+      </details>
+      <details>
+        <summary>Co bývá nejčastější příčinou selhání plánů kontinuity?</summary>
+        <p>Plán existoval. Role nebyly aktuální. Kontaktní údaje neseděly. Odpovědnost nebyla jasná. Selhal člověk a&nbsp;řízení, ne dokument. Většinou se na to přijde v&nbsp;okamžiku, kdy už je incident v&nbsp;plném rozsahu.</p>
+      </details>
+      <details>
+        <summary>Kdo má za Business Continuity odpovídat?</summary>
+        <p>Vedení. Není to delegovatelná odpovědnost na IT nebo externího dodavatele. Statutární orgán rozhoduje, jaké riziko firma akceptuje a&nbsp;co považuje za kritické. Implementace může být externí, odpovědnost ne.</p>
+      </details>
+      <details>
+        <summary>Jak u nás začne probíhat spolupráce na Business Continuity?</summary>
+        <p>Identifikace klíčových procesů a&nbsp;jejich závislostí. Nastavení tolerancí výpadku. Návrh plánu kontinuity. Test plánu v&nbsp;reálných podmínkách. Pravidelná aktualizace. Cílem není dokument, cílem je doložitelná schopnost firmy fungovat, když se něco stane.</p>
+      </details>
+      <details>
+        <summary>Kolik kontinuita stojí?</summary>
+        <p>Cena vychází z&nbsp;velikosti firmy, počtu kritických procesů a&nbsp;aktuálního stavu připravenosti. Praktický odhad: zlomek nákladu jednoho neplánovaného výpadku. Konkrétní rozpočet vzniká po úvodním posouzení, ne podle ceníku služeb.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="section cta-section" id="kontakt">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="cta-title">Rozhodněte o&nbsp;své <span class="grad">budoucnosti</span> teď.</h2>
+      <p class="section-lead">První krok je nezávazné setkání. Je diskrétní a&nbsp;rychle vám ukáže, jestli si budeme rozumět.</p>
+      <a href="mailto:info@premiumsystems.cz" class="btn btn-primary btn-lg">Chci to probrat</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/img/logo-white.svg" alt="Premium Systems" class="footer-logo">
+      <p>Architekti vaší kontinuity.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <a href="tel:+420737353737">+420&nbsp;737&nbsp;353&nbsp;737</a>
+      <a href="mailto:info@premiumsystems.cz">info@premiumsystems.cz</a>
+    </div>
+    <div class="footer-col">
+      <h4>Sídlo</h4>
+      <p>Hasičská 930/53<br>Ostrava</p>
+    </div>
+    <div class="footer-col">
+      <h4>Fakturační údaje</h4>
+      <p>IČO: 293&nbsp;92&nbsp;721<br>Krajský soud v&nbsp;Ostravě<br>spisová značka C&nbsp;38484</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> Premium Systems s.r.o. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+
+<script src="js/subpage.js"></script>
+</body>
+</html>

@@ -838,3 +838,158 @@ h3 { font-size: clamp(1.35rem, 1.9vw, 2rem); }
   .chart-xlabels .xl-m { display: none; }
   .chart-badge { padding: 7px 11px; border-radius: 10px; }
 }
+
+/* ═══════════════════════════════════════════════
+   PODSTRÁNKA: Business Continuity
+   ═══════════════════════════════════════════════ */
+
+/* Záloha nestačí: RTO + Premium Standard */
+.bc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 28px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.bc-stat {
+  padding: 42px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+.bc-stat-label {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.bc-stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.6vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.bc-stat-note { color: var(--ink-dim); }
+.bc-checklist { padding: 42px 38px; }
+.bc-checklist ul {
+  list-style: none;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.bc-checklist li {
+  position: relative;
+  padding-left: 34px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.bc-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #04121a;
+  background: linear-gradient(120deg, var(--grad-start), var(--grad-end));
+}
+
+/* Strategické výhody 2×2 */
+.bc-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+/* Operační proces: 4 kroky ve stylu sloupců s linkou */
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(28px, 3.5vw, 56px);
+}
+.step { display: flex; flex-direction: column; align-items: flex-start; }
+.step p {
+  color: var(--ink-dim);
+  margin-top: clamp(14px, 2vh, 24px);
+  font-size: clamp(0.92rem, 1.05vw, 1.05rem);
+  line-height: 1.7;
+  min-height: 6.5em;
+}
+.step .p-fill {
+  transform: scaleX(0);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.step.reveal.in .p-fill { transform: scaleX(1); }
+.steps-row .step:nth-child(2) .p-fill { transition-delay: 0.25s; }
+.steps-row .step:nth-child(3) .p-fill { transition-delay: 0.5s; }
+.steps-row .step:nth-child(4) .p-fill { transition-delay: 0.75s; }
+.steps-row .step:nth-child(2) { transition-delay: 0.1s; }
+.steps-row .step:nth-child(3) { transition-delay: 0.2s; }
+.steps-row .step:nth-child(4) { transition-delay: 0.3s; }
+
+/* FAQ */
+.faq {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.faq details {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+.faq details[open] { border-color: rgba(120, 180, 220, 0.3); }
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 22px 58px 22px 26px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(0.98rem, 1.2vw, 1.15rem);
+  position: relative;
+  transition: color 0.25s ease;
+}
+.faq summary:hover { color: var(--accent); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+.faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq details p {
+  padding: 0 26px 24px;
+  color: var(--ink-dim);
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .bc-grid { grid-template-columns: 1fr; }
+  .bc-benefits { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr 1fr; }
+  .step p { min-height: 0; }
+}
+@media (max-width: 560px) {
+  .steps-row { grid-template-columns: 1fr; gap: 24px; }
+}
