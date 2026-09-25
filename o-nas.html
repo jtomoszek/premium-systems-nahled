@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O nás | Premium Systems</title>
+<meta name="description" content="DNA odolnosti. Vycházíme z odvrácené strany byznysu, abychom vás udrželi na té vítězné. Bývalí elitní vyšetřovatelé hospodářské kriminality a forenzní auditoři.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/img/favicon-256.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+<!-- ══════════ SCROLL-DRIVEN VIDEO BACKGROUND ══════════ -->
+<div class="video-stage" aria-hidden="true">
+  <video id="bgVideo" muted playsinline preload="auto" poster="assets/video/poster.jpg"
+         data-src-desktop="assets/video/earth-scrub.mp4"
+         data-src-mobile="assets/video/earth-scrub-mobile.mp4"></video>
+  <div class="video-overlay"></div>
+  <div class="video-grain"></div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress"><span id="scrollBar"></span></div>
+
+<!-- Indikátor sekcí -->
+<nav class="side-nav" id="sideNav" aria-label="Navigace sekcí">
+  <a href="#hero" data-section="hero"><span class="bar"></span><span class="label">Úvod</span></a>
+  <a href="#tym" data-section="tym"><span class="bar"></span><span class="label">Náš tým</span></a>
+  <a href="#principy" data-section="principy"><span class="bar"></span><span class="label">Principy</span></a>
+  <a href="#sluzby" data-section="sluzby"><span class="bar"></span><span class="label">Služby</span></a>
+  <a href="#kontakt" data-section="kontakt"><span class="bar"></span><span class="label">Kontakt</span></a>
+</nav>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Premium Systems">
+      <img src="assets/img/logo-white.svg" alt="Premium Systems">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="business-continuity.html">Business Continuity</a>
+      <a href="nis2-zokb.html">NIS2 &amp; ZoKB</a>
+      <a href="experti.html">Experti na vaší straně</a>
+      <a href="o-nas.html">O nás</a>
+      <a href="index.html#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <p class="eyebrow reveal">Příběh autority</p>
+    <h1 class="hero-title reveal">
+      <span class="line">DNA</span>
+      <span class="line grad">odolnosti.</span>
+    </h1>
+    <p class="hero-sub reveal">Vycházíme z&nbsp;odvrácené strany byznysu,<br>abychom vás udrželi na té vítězné.</p>
+    <div class="hero-actions reveal">
+      <a href="#tym" class="btn btn-primary">Zjistit více</a>
+      <a href="#kontakt" class="btn btn-ghost">Kontakt</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span class="hint-label">Skrolujte</span>
+    <span class="hint-line"></span>
+  </div>
+</section>
+
+<!-- ══════════ Z VYŠETŘOVEN DO SPRÁVNÍCH RAD ══════════ -->
+<section class="section" id="tym">
+  <div class="container">
+    <div class="glass exp-full reveal">
+      <div class="exp-full-text">
+        <div class="p-num">Příběh autority</div>
+        <h3>Z&nbsp;vyšetřoven do správních rad.</h3>
+        <p>Premium Systems není běžná firma. Náš tým tvoří bývalí elitní vyšetřovatelé hospodářské kriminality a&nbsp;forenzní auditoři. Tam, kde jiní vidí procesní chybu, my vidíme vzorec rizika.</p>
+        <p style="margin-top:14px">Metodiku, kterou jsme léta používali k&nbsp;rozkrývání nejsložitějších finančních podvodů, jsme transformovali do systému preventivní ochrany. Nerozumíme jen IT. Rozumíme psychologii krize a&nbsp;mechanismům selhání.</p>
+      </div>
+      <div class="exp-stats">
+        <div class="exp-stat">
+          <span class="exp-stat-value grad">95&nbsp;%</span>
+          <span class="exp-stat-label">Úspěšnost v&nbsp;odhalování podvodů</span>
+        </div>
+        <div class="exp-stat">
+          <span class="exp-stat-value grad">0</span>
+          <span class="exp-stat-label">Úniků klientských dat za 10&nbsp;let</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PRAVDA BEZ DOMNĚNEK (scrollytelling) ══════════ -->
+<section class="proc-scroll" id="principy">
+  <div class="proc-sticky">
+    <div class="container">
+      <div class="section-head proc-head reveal">
+        <p class="eyebrow">Naše historie je naší největší zárukou</p>
+        <h2>„Pravda bez <span class="grad">domněnek</span>.“</h2>
+        <p class="section-lead">Pracujeme s&nbsp;fakty, která vzešla z&nbsp;forenzní praxe, nikoliv z&nbsp;učebnic managementu.</p>
+      </div>
+      <div class="principles-row">
+        <div class="principle">
+          <div class="p-num">// 01</div>
+          <p>Analyzujeme rizika s&nbsp;detektivní precizností. Neřešíme následky, eliminujeme příčiny v&nbsp;samém zárodku.</p>
+          <div class="p-strip"><span class="p-fill"></span></div>
+          <h3>Forenzní hloubka.</h3>
+        </div>
+        <div class="principle">
+          <div class="p-num">// 02</div>
+          <p>V&nbsp;momentech, kdy ostatní panikaří, náš tým aktivuje protokoly prověřené v&nbsp;nejnáročnějších krizových operacích.</p>
+          <div class="p-strip"><span class="p-fill"></span></div>
+          <h3>Profesionální klid.</h3>
+        </div>
+        <div class="principle">
+          <div class="p-num">// 03</div>
+          <p>Váš byznys je vaše životní dílo. Naším úkolem je zajistit, aby pokračovalo bez ohledu na vnější chaos.</p>
+          <div class="p-strip"><span class="p-fill"></span></div>
+          <h3>Ochrana odkazu.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EKOSYSTÉM ODOLNOSTI ══════════ -->
+<section class="section" id="sluzby">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Portfolio expertních služeb</p>
+      <h2>Ekosystém <span class="grad">odolnosti</span>.</h2>
+      <p class="section-lead">Business Continuity je srdcem našeho ekosystému. Kolem něj stavíme specifické vrstvy ochrany, které reagují na aktuální tržní hrozby a&nbsp;legislativní požadavky.</p>
+    </div>
+    <div class="cards">
+      <article class="glass card reveal">
+        <div class="card-num">01</div>
+        <h3>Business<br>Continuity</h3>
+        <p>Hloubková architektura přežití. Zajišťujeme, aby vaše firma fungovala i&nbsp;v&nbsp;případě totálního výpadku kritické infrastruktury.</p>
+        <a class="card-link" href="business-continuity.html">Prozkoumat metodu <span>→</span></a>
+      </article>
+      <article class="glass card reveal">
+        <div class="card-num">02</div>
+        <h3>NIS2<br>&amp;&nbsp;ZoKB</h3>
+        <p>Legislativa jako příležitost k&nbsp;opevnění. Převádíme povinné regulace do reálné konkurenční výhody. Bez stresu a&nbsp;pokut.</p>
+        <a class="card-link" href="nis2-zokb.html">Prověřit připravenost <span>→</span></a>
+      </article>
+      <article class="glass card reveal">
+        <div class="card-num">03</div>
+        <h3>Experti<br>na&nbsp;vyžádání</h3>
+        <p>Kybernetická bezpečnost, krizový management a&nbsp;ostré testy připravenosti. Služby na míru tam, kde standard nestačí.</p>
+        <a class="card-link" href="experti.html">Další expertíza <span>→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="section cta-section" id="kontakt">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="cta-title">Rozhodněte o&nbsp;své <span class="grad">budoucnosti</span> teď.</h2>
+      <p class="section-lead">První krok je nezávazné setkání. Je diskrétní a&nbsp;rychle vám ukáže, jestli si budeme rozumět.</p>
+      <a href="mailto:info@premiumsystems.cz" class="btn btn-primary btn-lg">Kontakt</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/img/logo-white.svg" alt="Premium Systems" class="footer-logo">
+      <p>Architekti vaší kontinuity.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <a href="tel:+420737353737">+420&nbsp;737&nbsp;353&nbsp;737</a>
+      <a href="mailto:info@premiumsystems.cz">info@premiumsystems.cz</a>
+    </div>
+    <div class="footer-col">
+      <h4>Sídlo</h4>
+      <p>Hasičská 930/53<br>Ostrava</p>
+    </div>
+    <div class="footer-col">
+      <h4>Fakturační údaje</h4>
+      <p>IČO: 293&nbsp;92&nbsp;721<br>Krajský soud v&nbsp;Ostravě<br>spisová značka C&nbsp;38484</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> Premium Systems s.r.o. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+
+<script src="js/subpage.js?v=3"></script>
+</body>
+</html>
