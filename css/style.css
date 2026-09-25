@@ -1053,3 +1053,17 @@ h3 { font-size: clamp(1.35rem, 1.9vw, 2rem); }
   height: auto;
   will-change: transform;
 }
+
+/* Kontakt: hodnoty na kartách */
+.contact-value {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2vw, 1.9rem);
+  line-height: 1.25;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+a.contact-value:hover { opacity: 0.8; }
+.contact-note { color: var(--ink-dim); margin-top: 12px; }
