@@ -1040,3 +1040,16 @@ h3 { font-size: clamp(1.35rem, 1.9vw, 2rem); }
   .exp-full { grid-template-columns: 1fr; }
   .exp-stats { flex-direction: row; gap: 40px; }
 }
+
+/* O nás: skupinová fotka týmu — vyrůstá zespodu jako Jirka na homepage */
+.team-panel {
+  margin-top: 28px;
+  overflow: hidden;
+  padding: clamp(28px, 4.5vw, 64px) clamp(24px, 4vw, 56px) 0;
+}
+.team-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  will-change: transform;
+}

@@ -114,6 +114,23 @@
     });
   }
 
+  // Fotka v .team-panel vyrůstá zespodu při skrolování (jako CEO na homepage)
+  const growPanel = document.querySelector(".team-panel");
+  const growImg = growPanel ? growPanel.querySelector("img") : null;
+  let lastGrow = -1;
+
+  function updateGrow() {
+    if (!growImg) return;
+    const r = growPanel.getBoundingClientRect();
+    const vh = window.innerHeight;
+    if (r.bottom < -80 || r.top > vh + 80) return;
+    const p = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+    const shift = 26 * Math.pow(1 - p, 1.15);
+    if (Math.abs(shift - lastGrow) < 0.05) return;
+    lastGrow = shift;
+    growImg.style.transform = "translateY(" + shift.toFixed(2) + "%)";
+  }
+
   function tick() {
     if (videoDuration > 0 && video.readyState >= 2) {
       if (seekBusy && !video.seeking) seekBusy = false;
@@ -130,6 +147,7 @@
     }
     updateBlur();
     updateProc();
+    updateGrow();
     requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);
