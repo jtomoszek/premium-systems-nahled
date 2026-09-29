@@ -17,13 +17,18 @@
 
   // Stáhneme video celé do paměti a přepneme na blob — seeky pak běží
   // čistě lokálně, plynule a bez ohledu na podporu Range requestů serverem.
-  fetch(videoSrc)
-    .then((r) => (r.ok ? r.blob() : Promise.reject(r.status)))
-    .then((blob) => {
-      video.src = URL.createObjectURL(blob);
-      video.load();
-    })
-    .catch(() => { /* zůstane streamovaná verze */ });
+  function preloadVideoBlob() {
+    fetch(videoSrc)
+      .then((r) => (r.ok ? r.blob() : Promise.reject(r.status)))
+      .then((blob) => {
+        video.src = URL.createObjectURL(blob);
+        video.load();
+      })
+      .catch(() => { /* zůstane streamovaná verze */ });
+  }
+  // stažení celého videa až po načtení stránky — neblokuje first paint
+  if (document.readyState === "complete") preloadVideoBlob();
+  else window.addEventListener("load", preloadVideoBlob);
 
   let videoDuration = 0;
   let currentTime = 0;

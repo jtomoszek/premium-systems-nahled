@@ -1,0 +1,17 @@
+# Premium Systems, s.r.o.
+
+> Architekti kontinuity vašeho podnikání. Business Continuity, soulad s NIS2 a ZoKB
+> a expertní bezpečnostní služby pro management. Sídlo Ostrava (Hasičská 930/53),
+> působnost po celé České republice. Tým tvoří bývalí elitní vyšetřovatelé
+> hospodářské kriminality a forenzní auditoři.
+
+Kontakt: +420 737 353 737 · info@premiumsystems.cz · IČO 29392721, DIČ CZ29392721
+
+## Stránky
+
+- [Homepage](https://jtomoszek.github.io/premium-systems-nahled/): Váš byznys. Nezastavitelný. Přehled služeb, reference (Shopsys, Albert, Čeladná, Agel, Ostrava Logistics Park, Avogado) a interaktivní vizualizace dopadu výpadku na tržby.
+- [Business Continuity](https://jtomoszek.github.io/premium-systems-nahled/business-continuity.html): Řízení kontinuity provozu firmy. BIA, krizové řízení, simulace útoků, kontinuita dodavatelského řetězce, High Availability. RTO v sekundách a minutách. Proces: Rentgen → Plán → Zbrojnice → Bitva. FAQ pro management.
+- [NIS2 & ZoKB](https://jtomoszek.github.io/premium-systems-nahled/nis2-zokb.html): Povinnosti vedení podle NIS2 a zákona o kybernetické bezpečnosti. Osobní odpovědnost statutárních orgánů, pilíře souladu (governance, řízení rizik, incident reporting), 6 povinných opatření, časová osa implementace (6–12 měsíců). FAQ.
+- [Experti na vaší straně](https://jtomoszek.github.io/premium-systems-nahled/experti.html): Shadow Admin (supervize IT, AI governance), Intervence (incident handling), Forenzní audit (vnitřní hrozby, screeningy), Integrace areálů (LPR, kamerové systémy), Compliance Leadership (externí manažer compliance). FAQ.
+- [O nás](https://jtomoszek.github.io/premium-systems-nahled/o-nas.html): Tým bývalých vyšetřovatelů hospodářské kriminality. 95% úspěšnost v odhalování podvodů, 0 úniků klientských dat za 10 let. CEO & Founder: Jiří Pudich.
+- [Kontakt](https://jtomoszek.github.io/premium-systems-nahled/kontakt.html): Telefon Po–Pá 8:00–18:00, e-mail s odpovědí do jednoho dne, sídlo Ostrava, práce po celé ČR.
